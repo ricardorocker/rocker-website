@@ -1,0 +1,12 @@
+.footer a.text-black {
+  background-position: 0 0;
+  background-size: 100% 200%;
+  padding: 2px 4px;
+  background-image: linear-gradient(to bottom, transparent 50%, black 50%);
+  transition: background-position 0.5s;
+}
+
+.footer a.text-black:hover {
+  background-position: 0 100%;
+  color: white !important;
+}
