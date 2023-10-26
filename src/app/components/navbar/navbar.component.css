@@ -1,0 +1,15 @@
+.symbol {
+    font-size: 32px;
+    margin-bottom: 4px;
+    padding: 0 4px;
+}
+
+.first-row {
+    letter-spacing: 2px;
+    line-height: 20px;
+}
+
+.second-row {
+    font-size: 16px;
+    line-height: 16px;
+}
