@@ -3,6 +3,10 @@
 }
 
 .container {
+  padding-top: 50px;
+}
+
+.top-container {
   padding-top: 170px;
 }
 
@@ -67,8 +71,8 @@ p {
 }
 
 @media screen and (max-width: 555px) {
-  .container {
-    padding-top: 120px;
+  .top-container {
+    padding-top: 100px;
   }
 
   .fw-bold {
