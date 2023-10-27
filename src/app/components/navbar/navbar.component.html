@@ -24,15 +24,22 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/about" routerLinkActive="active">{{
-            traducao.obterTraducao("navbar.about") | uppercase
-          }}</a>
+          <a
+            class="nav-link"
+            routerLink="/about"
+            routerLinkActive="active"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            >{{ traducao.obterTraducao("navbar.about") | uppercase }}</a
+          >
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
             routerLink="/experience"
             routerLinkActive="active"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
             >{{ traducao.obterTraducao("navbar.experience") | uppercase }}</a
           >
         </li>
@@ -41,19 +48,31 @@
             class="nav-link"
             routerLink="/portfolio"
             routerLinkActive="active"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
             >{{ traducao.obterTraducao("navbar.portfolio") | uppercase }}</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contact" routerLinkActive="active">{{
-            traducao.obterTraducao("navbar.contact") | uppercase
-          }}</a>
+          <a
+            class="nav-link"
+            routerLink="/contact"
+            routerLinkActive="active"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            >{{ traducao.obterTraducao("navbar.contact") | uppercase }}</a
+          >
         </li>
         <div class="vr text-white mx-2"></div>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/blog" routerLinkActive="active">{{
-            traducao.obterTraducao("navbar.blog") | uppercase
-          }}</a>
+          <a
+            class="nav-link"
+            routerLink="/blog"
+            routerLinkActive="active"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            >{{ traducao.obterTraducao("navbar.blog") | uppercase }}</a
+          >
         </li>
         <li class="nav-item">
           <button class="nav-link" (click)="alterarIdioma()">

@@ -10,13 +10,11 @@ export class NavbarComponent {
   englishTranslation: boolean = true;
 
   constructor(public traducao: TranslationService) {}
-
-  ngOnInit():void {
-    console.log('teste')
-  }
-
+  
   alterarIdioma() {
-    this.traducao.alterarIdioma(this.englishTranslation ? 'portuguese' : 'english');
+    this.traducao.alterarIdioma(
+      this.englishTranslation ? 'portuguese' : 'english'
+    );
     this.englishTranslation = !this.englishTranslation;
   }
 }

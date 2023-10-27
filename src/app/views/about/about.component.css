@@ -2,12 +2,8 @@
   background-color: #7b95b2;
 }
 
-.container {
-  padding-top: 50px;
-}
-
 .top-container {
-  padding-top: 170px;
+  padding-top: 100px;
 }
 
 .description {
@@ -72,7 +68,7 @@ p {
 
 @media screen and (max-width: 555px) {
   .top-container {
-    padding-top: 100px;
+    padding-top: 30px;
   }
 
   .fw-bold {
