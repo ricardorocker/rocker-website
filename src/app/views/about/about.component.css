@@ -3,7 +3,7 @@
 }
 
 .container {
-  padding-top: 100px;
+  padding-top: 170px;
 }
 
 .description {
@@ -68,7 +68,7 @@ p {
 
 @media screen and (max-width: 555px) {
   .container {
-    padding-top: 50px;
+    padding-top: 120px;
   }
 
   .fw-bold {
