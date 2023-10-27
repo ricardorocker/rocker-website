@@ -1,0 +1,12 @@
+.experience {
+    background-color: #081741;
+}
+
+.container {
+    background-image: url(../../../assets/construction.png);
+    min-height: 850px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 60px;
+}
