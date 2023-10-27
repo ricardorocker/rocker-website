@@ -1,6 +1,14 @@
 * {
     font-family: monospace;
+    font-size: 16px;
 }
+
+.title {
+    color: #0a2670;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
 
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css" 
