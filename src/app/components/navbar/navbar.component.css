@@ -1,15 +1,31 @@
+.bg-color {
+  background-color: #081741;
+}
+
 .symbol {
-    font-size: 32px;
-    margin-bottom: 4px;
-    padding: 0 4px;
+  font-size: 32px;
+  margin-bottom: 4px;
+  padding: 0 4px;
 }
 
 .first-row {
-    letter-spacing: 2px;
-    line-height: 20px;
+  font-size: 21px;
+  letter-spacing: 2px;
+  line-height: 20px;
 }
 
 .second-row {
-    font-size: 16px;
-    line-height: 16px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.nav-link {
+  font-size: 16px;
+  margin: 0 14px;
+}
+
+@media screen and (max-width: 992px) {
+  .vr {
+    display: none;
+  }
 }

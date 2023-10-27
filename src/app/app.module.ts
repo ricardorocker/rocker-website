@@ -10,6 +10,7 @@ import { BlogComponent } from './views/blog/blog.component';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ExperienceComponent } from './views/experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     BlogComponent,
     PortfolioComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,
