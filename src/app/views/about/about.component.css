@@ -1,9 +1,9 @@
-.bg-color {
-  background-color: #7b95b2;
-}
-
-.top-container {
-  padding-top: 100px;
+.banner {
+  background-image: url('../../../assets/banner.png');
+  background-size: cover;
+  background-position: 56% 0;
+  height: 600px;
+  align-items: center;
 }
 
 .description {
@@ -24,12 +24,12 @@
   height: 60px;
   margin-top: 14px;
   font-size: 14px;
-  border: 0.1px solid black;
+  border: 0.1px solid white;
 }
 
 .button-link:hover {
-  background-color: #081741;
-  color: white !important;
+  background-color: white;
+  color: #303850 !important;
 }
 
 p {
