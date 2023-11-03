@@ -1,9 +1,13 @@
 .banner {
-  background-image: url('../../../assets/banner.png');
+  background-image: url("../../../assets/banner.png");
   background-size: cover;
   background-position: 56% 0;
   height: 600px;
   align-items: center;
+}
+
+.mobile-image {
+  display: none;
 }
 
 .description {
@@ -60,18 +64,9 @@ p {
 }
 
 @media screen and (max-width: 555px) {
-  .top-container {
-    padding-top: 30px;
-  }
-
   .fw-bold {
     font-size: 38px;
     line-height: 38px;
-  }
-
-  .col-7,
-  .col-5 {
-    width: 100%;
   }
 
   .button-link {
@@ -82,5 +77,16 @@ p {
 
   img {
     max-width: 100%;
+  }
+
+  .banner {
+    background-image: none;
+    background-color: #303850;
+    flex-direction: column; 
+    justify-content: flex-end; 
+  }
+
+  .mobile-image {
+    display: flex;
   }
 }
