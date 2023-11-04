@@ -1,12 +1,21 @@
-.contact {
-    background-color: #081741;
+.container {
+  margin-top: 100px;
 }
 
-.container {
-    background-image: url(../../../assets/construction.png);
-    min-height: 850px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 60px;
+.row {
+  padding: 14px 0;
+}
+
+input,
+textarea {
+  border: none;
+  border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+img {
+  height: 35px;
+}
+
+.icon:hover {
+  cursor: pointer;
 }

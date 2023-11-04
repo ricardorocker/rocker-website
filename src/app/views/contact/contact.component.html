@@ -1,8 +1,83 @@
-<div class="contact">
-    <div class="container d-flex justify-content-center align-items-center">
-        <div class="text-center">
-            <h1 class="display-1 text-white">UNDER CONSTRUCTION</h1>
-            <p class="h3 text-white">But not for long. Something fantastic is on its way!</p>
+<div class="container">
+  <div class="title my-4">Contact</div>
+  <div class="section-body">
+    <div class="row">
+      <div class="section-form col-12 col-md-6 px-4">
+        <form [formGroup]="contact" class="form-group" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <label for="email" class="form-label fw-bold">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter a valid email address"
+              formControlName="email"
+            />
+          </div>
+          <div class="row">
+            <label for="name" class="form-label fw-bold">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter your Name"
+              formControlName="name"
+            />
+          </div>
+          <div class="row">
+            <label for="message" class="form-label fw-bold">Message</label>
+            <textarea
+              rows="4"
+              class="form-control"
+              placeholder="Enter your message"
+              formControlName="message"
+            ></textarea>
+          </div>
+          <div class="row">
+            <button type="submit" class="button-submit-dark">Send it</button>
+          </div>
+        </form>
+      </div>
+      <div class="section-social-media col-12 col-md-6 px-4">
+        <h1>Get in Touch</h1>
+        <div class="fw-bold my-4">
+          Let's connect and discuss your next project.
         </div>
+        <p class="my-4">
+          With years of experience in Angular development, I'm here to help you
+          build high-quality web applications that meet your business needs.
+        </p>
+        <p class="my-4">Feel free to reach out on:</p>
+        <div class="social-media d-flex">
+          <div class="icon me-3">
+            <a href="https://github.com/ricardorocker" target="_blank"></a
+            ><img src="../../../assets/github.png" />
+          </div>
+          <div class="icon me-3">
+            <a
+              href="https://www.instagram.com/ricardorocker.developer/"
+              target="_blank"
+            ></a
+            ><img src="../../../assets/instagram.png" />
+          </div>
+          <div class="icon me-3">
+            <a
+              href="https://www.linkedin.com/in/ricardo-s-rocker/"
+              target="_blank"
+            ></a
+            ><img src="../../../assets/linkedin.png" />
+          </div>
+          <div class="icon me-3">
+            <a
+              href="https://www.youtube.com/@ricardorocker.developer"
+              target="_blank"
+            ></a
+            ><img src="../../../assets/youtube.png" />
+          </div>
+          <div class="icon me-3">
+            <a href="https://wa.me/55083991222886" target="_blank"></a
+            ><img src="../../../assets/whatsapp.png" />
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

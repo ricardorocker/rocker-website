@@ -22,18 +22,8 @@
   font-family: sans-serif;
 }
 
-.button-link {
-  background-color: transparent;
+.button-submit-light {
   width: 210px;
-  height: 60px;
-  margin-top: 14px;
-  font-size: 14px;
-  border: 0.1px solid white;
-}
-
-.button-link:hover {
-  background-color: white;
-  color: #303850 !important;
 }
 
 p {
@@ -69,7 +59,7 @@ p {
     line-height: 38px;
   }
 
-  .button-link {
+  .button-submit-light {
     width: 100%;
     margin-top: 14px;
     margin-bottom: 28px;
