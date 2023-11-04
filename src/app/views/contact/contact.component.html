@@ -3,25 +3,33 @@
   <div class="section-body">
     <div class="row">
       <div class="section-form col-12 col-md-6 px-4">
-        <form [formGroup]="contact" class="form-group" (ngSubmit)="onSubmit()">
+        <form
+          class="form-group"
+          (ngSubmit)="onSubmit()"
+          [formGroup]="contactForm"
+        >
           <div class="row">
             <label for="email" class="form-label fw-bold d-flex"> Email </label>
             <input
-              type="text"
+              type="email"
               class="form-control"
               placeholder="Enter a valid email address"
               formControlName="email"
             />
             <div
-              *ngIf="
-                this.contact.invalid &&
-                this.contact.controls['email'].invalid &&
-                this.contact.touched
-              "
               class="d-flex alert alert-danger lh-1 p-2 mt-1"
-              role="alert"
+              *ngIf="
+                contactForm.get('email')!.hasError('required') &&
+                contactForm.touched
+              "
             >
-              Enter a valid email address
+              Email is required.
+            </div>
+            <div
+              class="d-flex alert alert-danger lh-1 p-2 mt-1"
+              *ngIf="contactForm.get('email')!.hasError('email')"
+            >
+              Invalid email format.
             </div>
           </div>
           <div class="row">
@@ -32,6 +40,21 @@
               placeholder="Enter your Name"
               formControlName="name"
             />
+            <div
+              class="d-flex alert alert-danger lh-1 p-2 mt-1"
+              *ngIf="
+                contactForm.get('name')!.hasError('required') &&
+                contactForm.touched
+              "
+            >
+              Name is required.
+            </div>
+            <div
+              class="d-flex alert alert-danger lh-1 p-2 mt-1"
+              *ngIf="contactForm.get('name')!.hasError('minlength')"
+            >
+              Name must be at least 3 characters.
+            </div>
           </div>
           <div class="row">
             <label for="message" class="form-label fw-bold">Message</label>
@@ -41,6 +64,21 @@
               placeholder="Enter your message"
               formControlName="message"
             ></textarea>
+            <div
+              class="d-flex alert alert-danger lh-1 p-2 mt-1"
+              *ngIf="
+                contactForm.get('message')!.hasError('required') &&
+                contactForm.touched
+              "
+            >
+              Message is required.
+            </div>
+            <div
+              class="d-flex alert alert-danger lh-1 p-2 mt-1"
+              *ngIf="contactForm.get('message')!.hasError('minlength')"
+            >
+              Message must be at least 5 characters.
+            </div>
           </div>
           <div class="row">
             <button type="submit" class="button-submit-dark">Send it</button>

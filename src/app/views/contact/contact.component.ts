@@ -7,30 +7,49 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent {
-  contact!: FormGroup;
+  contactForm!: FormGroup;
 
   constructor(private form: FormBuilder) {}
 
+  get formControls() {
+    return this.contactForm.controls;
+  }
+
   ngOnInit(): void {
-    this.contact = this.form.group({
-      name: ['', [Validators.required]],
+    this.contactForm = this.form.group({
+      name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
-      message: ['', [Validators.required]],
+      message: ['', [Validators.required, Validators.minLength(5)]],
     });
   }
 
   onSubmit() {
-    if (this.contact.valid) {
-      const name = this.contact.get('name')?.value;
-      const email = this.contact.get('email')?.value;
-      const message = this.contact.get('message')?.value;
+    if (this.contactForm.valid) {
+      const formElement = document.createElement('form');
+      formElement.target = '_blank';
+      formElement.action = 'https://formsubmit.co/contact@ricardorocker.com';
+      formElement.method = 'POST';
 
-      const whatsappNumber = '55083991222886';
-      const text = `Hi, my name is ${name}. My email is ${email}. I have a message for you: ${message}`;
-      const encodedText = encodeURIComponent(text);
-      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+      for (const key in this.contactForm.value) {
+        if (this.contactForm.value.hasOwnProperty(key)) {
+          const inputElement = document.createElement('input');
+          inputElement.type = 'hidden';
+          inputElement.name = key;
+          inputElement.value = this.contactForm.value[key];
+          formElement.appendChild(inputElement);
+        }
+      }
 
-      window.open(whatsappURL, '_blank');
+      document.body.appendChild(formElement);
+      formElement.submit();
+    } else {
+      // Handle form validation errors and display error messages.
+      Object.keys(this.contactForm.controls).forEach((controlName) => {
+        const control = this.contactForm.get(controlName);
+        if (control && control.invalid) {
+          control.markAsTouched(); // Mark the control as touched to trigger error messages.
+        }
+      });
     }
   }
 }
