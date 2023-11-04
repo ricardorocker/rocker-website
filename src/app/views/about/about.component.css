@@ -32,7 +32,7 @@ p {
   padding: 6px 0;
 }
 
-img {
+.icon img {
   height: 35px;
 }
 
@@ -67,6 +67,10 @@ img {
     width: 100%;
     margin-top: 14px;
     margin-bottom: 28px;
+  }
+  
+  .button-submit-dark {
+    width: 100%;
   }
 
   img {
