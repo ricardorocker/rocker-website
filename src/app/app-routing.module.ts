@@ -8,11 +8,16 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ExperienceComponent } from './views/experience/experience.component';
 
 const routes: Routes = [
-  { path: 'about', component: AboutComponent },
-  { path: 'portfolio', component: PortfolioComponent },
-  { path: 'blog', component: BlogComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'experience', component: ExperienceComponent },
+  { path: 'about', title: 'about', component: AboutComponent },
+  { path: 'portfolio', title: 'portfolio', component: PortfolioComponent },
+  { path: 'blog', title: 'blog', component: BlogComponent },
+  { path: 'contact', title: 'contact', component: ContactComponent },
+  { path: 'experience', title: 'experience', component: ExperienceComponent },
+  { path: 'about', redirectTo: '/about', pathMatch: 'full' },
+  { path: 'portfolio', redirectTo: '/portfolio', pathMatch: 'full' },
+  { path: 'blog', redirectTo: '/blog', pathMatch: 'full' },
+  { path: 'contact', redirectTo: '/contact', pathMatch: 'full' },
+  { path: 'experience', redirectTo: '/experience', pathMatch: 'full' },
   { path: '', redirectTo: '/about', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
