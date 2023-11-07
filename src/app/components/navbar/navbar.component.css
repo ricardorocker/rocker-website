@@ -1,4 +1,14 @@
-.bg-color {
+.bg-color,
+.container,
+li,
+.collapse,
+.logo,
+.symbol,
+.first-row,
+.second-row,
+.navbar-collapse,
+.navbar-toggler,
+.navbar-toggler-icon {
   background-color: #303850;
 }
 
@@ -29,18 +39,17 @@
   font-size: 16px;
   margin: 0 14px;
   opacity: 0;
-  animation: slideTop .5s ease forwards;
-  animation-delay: calc(.2s * var(--i));
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 
 .nav-link:hover {
-  color: #00E2EA;
+  color: #00e2ea;
 }
 
 .navbar-nav .active {
-  color: #00E2EA;
+  color: #00e2ea;
 }
-
 
 @media screen and (max-width: 992px) {
   .vr {

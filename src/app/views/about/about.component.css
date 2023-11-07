@@ -4,17 +4,21 @@
   background-position: 56% 0;
   height: 600px;
   align-items: center;
-  position: relative; 
+  position: relative;
+}
+
+.top-container, .col-12, .name, .description, .h2, .top-container .social-media, .top-container img, .typed-element, .profile-image img, .mobile-layout {
+  background-color: #303850;
 }
 
 .profile-image {
-  position: absolute;  
+  position: absolute;
   top: 70px;
   left: 55%;
   transform: translate(0, -50%);
   opacity: 0;
-  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-  animation-delay: 2s, 3s;
+  animation: zoomAndFloat 70s ease-in-out forwards;
+  animation-delay: 1.5s;
 }
 
 .description {
@@ -25,19 +29,19 @@
 .type-1 {
   opacity: 0;
   animation: slideBottom 1s ease forwards;
-  animation-delay: .7s;
+  animation-delay: 0.7s;
 }
 
 .type-2 {
   opacity: 0;
   animation: slideTop 1s ease forwards;
-  animation-delay: .7s;
+  animation-delay: 0.7s;
 }
 
 .h2 {
   opacity: 0;
   animation: slideRight 1s ease forwards;
-  animation-delay: .7s;
+  animation-delay: 0.7s;
 }
 
 .fw-bold {
@@ -50,15 +54,15 @@
 .typed-element {
   font-size: 21px;
   font-weight: bold;
-  color: #00E2EA;
+  color: #00e2ea;
 }
 
 .icons a {
   margin-right: 21px;
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
-  animation-delay: calc(.2s * var(--i));
+  animation-delay: calc(0.2s * var(--i));
 }
 
 .button-submit-blue {
@@ -84,6 +88,14 @@ p {
   transform: scale(1.2);
 }
 
+.content {
+  width: 900px;
+  color: #303850;
+}
+
+.subtitle {
+  font-size: 28px;
+}
 
 @media screen and (max-width: 1000px) {
   .profile-image img {
@@ -118,14 +130,11 @@ p {
     line-height: 38px;
   }
 
-  .button-submit-blue {
+  .button-submit-blue,
+  .button-submit-dark {
     width: 100%;
     margin-top: 14px;
     margin-bottom: 28px;
-  }
-  
-  .button-submit-dark {
-    width: 100%;
   }
 
   .col-12 {
@@ -139,8 +148,8 @@ p {
   .banner {
     background-image: none;
     background-color: #303850;
-    flex-direction: column; 
-    justify-content: flex-end; 
+    flex-direction: column;
+    justify-content: flex-end;
     height: auto;
   }
 
@@ -149,12 +158,42 @@ p {
     top: auto;
     right: auto;
     left: auto;
-    transform: none; 
-    margin-top: 14px; 
+    transform: none;
+    margin-top: 14px;
+    opacity: 0;
+    animation: zoomAndFloat 70s ease-in-out forwards;
+    animation-delay: 1.5s;
+  }
+
+  .content {
+    width: auto;
   }
 }
 
-@keyframes zoomIn {
+@keyframes zoomAndFloat {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  2%, 6%, 10%, 14%, 18%, 22%, 26%, 30%, 34%, 38%, 42%, 46%, 50%, 54%, 58%, 62%, 66%, 70%, 74%, 78%, 82%, 86%, 90%, 94%, 98% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  4%, 8%, 12%, 16%, 20%, 24%, 28%, 32%, 36%, 40%, 44%, 48%, 52%, 56%, 60%, 64%, 68%, 72%, 76%, 80%, 84%, 88%, 92%, 96% {
+    transform: scale(1);
+    opacity: 1;
+    transform: translateY(-24px);
+  }
+  
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* @keyframes zoomIn {
   0% {
     transform: scale(0);
     opacity: 0;
@@ -165,21 +204,24 @@ p {
   }
 }
 
-@keyframes slideInFromBottom {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 @keyframes floatImage {
   0% {
     transform: translateY(0);
+    opacity: 1;
   }
   50% {
     transform: translateY(-24px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} */
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
   }
   100% {
     transform: translateY(0);

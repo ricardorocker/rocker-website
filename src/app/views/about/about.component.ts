@@ -10,9 +10,10 @@ export class AboutComponent {
   ngOnInit() {
     const options = {
       strings: [
-        'Web Developer',
-        'Angular Developer',
-        'Designer'],
+        '&nbsp;Web Developer',
+        '&nbsp;Designer',
+        'n Angular Developer',
+      ],
       typeSpeed: 100,
       backSpeed: 70,
       backDelay: 1000,

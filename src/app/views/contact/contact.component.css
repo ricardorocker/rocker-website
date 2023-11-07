@@ -1,5 +1,5 @@
 .container {
-  margin-top: 100px;
+  margin-top: 100px;  
 }
 
 .row {
@@ -19,4 +19,10 @@ img {
 .icon:hover {
   cursor: pointer;
   transform: scale(1.2);
+}
+
+@media screen and (max-width: 555px) {
+  .section-social-media {
+    margin-top: 30px;
+  }
 }

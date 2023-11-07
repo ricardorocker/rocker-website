@@ -1,6 +1,7 @@
 * {
   font-family: monospace;
   font-size: 16px;
+  background-color: #fff;
 }
 
 .title {
@@ -8,18 +9,44 @@
   font-size: 40px;
   font-weight: bold;
   font-family: sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subtitle {  
+  color: #3d5088;
+}
+
+.content-text {  
+  color: #303850;
 }
 
 .button-submit-dark {
   background-color: transparent;
   height: 60px;
+  min-width: 210px;
   margin-top: 14px;
   font-size: 14px;
-  border: 0.1px solid 303850;
+  border: 0.1px solid #3d5088;
+  color: #3d5088;
   text-transform: uppercase;
 }
 
 .button-submit-dark:hover {
+  background-color: #303850;
+  color: white !important;
+}
+
+.button-submit-dark-default {
+  background-color: transparent;
+  height: 60px;
+  margin-top: 14px;
+  font-size: 14px;
+  border: 0.1px solid #303850;
+  text-transform: uppercase;
+}
+
+.button-submit-dark-default:hover {
   background-color: #303850;
   color: white !important;
 }

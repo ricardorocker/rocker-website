@@ -1,17 +1,17 @@
 .portfolio {
-    padding-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .card {
-    background-color: #F4F6FC;
-    color: #303850;
-    border: 1px solid transparent;
-    border-radius: 0px;
-    transition: box-shadow 0.3s, transform 0.3s;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transform: scale(1.05);
-  }
+  background-color: #f4f6fc;
+  color: #303850;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
