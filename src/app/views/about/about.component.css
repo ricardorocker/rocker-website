@@ -1,9 +1,18 @@
 .banner {
-  background-image: url("../../../assets/banner.png");
+  background-color: #303850;
   background-size: cover;
   background-position: 56% 0;
   height: 600px;
   align-items: center;
+}
+
+.profile-image {
+  position: absolute;
+  margin-left: 50%;
+  margin-top: -20%;  
+  opacity: 0;
+  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 2s, 3s;
 }
 
 .mobile-image {
@@ -15,6 +24,24 @@
   line-height: 42px;
 }
 
+.type-1 {
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: .7s;
+}
+
+.type-2 {
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: .7s;
+}
+
+.h2 {
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: .7s;
+}
+
 .fw-bold {
   font-size: 42px;
   line-height: 42px;
@@ -22,8 +49,19 @@
   font-family: sans-serif;
 }
 
+.icons a {
+  margin-right: 9px;
+  transition: .5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+
 .button-submit-light {
   width: 210px;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
 }
 
 p {
@@ -32,11 +70,11 @@ p {
   padding: 6px 0;
 }
 
-.icon img {
+.icons img {
   height: 35px;
 }
 
-.icon img:hover {
+.icons img:hover {
   transform: scale(1.2);
 }
 
@@ -90,5 +128,81 @@ p {
 
   .mobile-image {
     display: flex;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-24px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

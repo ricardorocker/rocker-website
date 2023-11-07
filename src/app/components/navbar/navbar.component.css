@@ -2,6 +2,11 @@
   background-color: #303850;
 }
 
+.navbar-brand {
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+
 .symbol {
   font-size: 32px;
   margin-bottom: 4px;
@@ -20,12 +25,38 @@
 }
 
 .nav-link {
+  display: inline-block;
   font-size: 16px;
   margin: 0 14px;
+  opacity: 0;
+  animation: slideTop .5s ease forwards;
+  animation-delay: calc(.2s * var(--i));
 }
 
 @media screen and (max-width: 992px) {
   .vr {
     display: none;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
